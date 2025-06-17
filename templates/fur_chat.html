@@ -1,0 +1,566 @@
+
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<link href="/static/chat_style/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
+<script src="/static/chat_style/bootstrap.min.js"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<script src="/static/chat_style/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat</title>
+		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+		<link rel="stylesheet" href="/static/chat_style/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">-->
+		<link rel="stylesheet" href="/static/chat_style/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+		<script src="/static/chat_style/jquery.min.js"></script>
+		<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">-->
+		<link rel="stylesheet" type="text/css" href="/static/chat_style/jquery.mCustomScrollbar.min.css">
+		<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>-->
+		<script type="text/javascript" src="/static/chat_style/jquery.mCustomScrollbar.min.js"></script>
+	</head>
+	<!--Coded With Love By Mutiullah Samim-->
+	<body>
+
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				<div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+					<div class="card-header">
+						<div class="input-group">
+							<a href="/expert_dashboard" style="color: white">Go to Home</a>
+							<!--<input type="text" placeholder="Search..." name="" class="form-control search">-->
+							<!--<div class="input-group-prepend">-->
+								<!--<span class="input-group-text search_btn"><i class="fas fa-search"></i></span>-->
+							<!--</div>-->
+						</div>
+					</div>
+                    <div id="tb1">
+                        <input type="hidden" name="d" id="d" value="{{ toid }}" />
+           <input type="hidden" name="textfield2" id="rece" />
+
+                    </div>
+
+
+					<div class="card-footer"></div>
+				</div></div>
+				<div class="col-md-8 col-xl-6 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont" id="iiim">
+									<!--<img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">-->
+									<a href="/councillor_view_profile"><img src="{{ photo }}" class="rounded-circle user_img"></a>
+									<span class="online_icon"></span>
+
+								</div>
+								<div class="user_info" id="nnnm">
+                                       <table>
+                                           <tr><td><input disabled type="" class="btn btn-outline-light" value="{{ name }}"></td></tr>
+                                       </table>
+{#									<!--<p>1767 Messages</p>-->#}
+								</div>
+
+							</div>
+							<span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+
+						</div>
+						<div class="card-body msg_card_body" >
+
+                            <div id="send1">
+
+                            </div>
+
+
+					</div>
+                        <div class="card-footer">
+
+							<div class="input-group">
+								<div class="input-group-append">
+									<span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+								</div>
+								<textarea name="" id="textfield"class="form-control type_msg" placeholder="Type your message..."></textarea>
+								<div class="input-group-append">
+									<!--<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>-->
+                                    <input type="submit"class="input-group-text send_btn" value="send" id="button">
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+        </div>
+
+	</body>
+</html>
+<style>
+    	body,html{
+			height: 100%;
+			margin: 0;
+			background: #7F7FD5;
+	       background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+	        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+		}
+
+		.chat{
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+		.card{
+			height: 500px;
+			border-radius: 15px !important;
+			background-color: rgba(0,0,0,0.4) !important;
+		}
+		.contacts_body{
+			padding:  0.75rem 0 !important;
+			overflow-y: auto;
+			white-space: nowrap;
+		}
+		.msg_card_body{
+			overflow-y: auto;
+		}
+		.card-header{
+			border-radius: 15px 15px 0 0 !important;
+			border-bottom: 0 !important;
+		}
+	 .card-footer{
+		border-radius: 0 0 15px 15px !important;
+			border-top: 0 !important;
+	}
+		.container{
+			align-content: center;
+		}
+		.search{
+			border-radius: 15px 0 0 15px !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color:white !important;
+		}
+		.search:focus{
+		     box-shadow:none !important;
+           outline:0px !important;
+		}
+		.type_msg{
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color:white !important;
+			height: 60px !important;
+			overflow-y: auto;
+		}
+			.type_msg:focus{
+		     box-shadow:none !important;
+           outline:0px !important;
+		}
+		.attach_btn{
+	border-radius: 15px 0 0 15px !important;
+	background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.send_btn{
+	border-radius: 0 15px 15px 0 !important;
+	background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.search_btn{
+			border-radius: 0 15px 15px 0 !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.contacts{
+			list-style: none;
+			padding: 0;
+		}
+		.contacts li{
+			width: 100% !important;
+			padding: 5px 10px;
+			margin-bottom: 15px !important;
+		}
+	.active{
+			background-color: rgba(0,0,0,0.3);
+	}
+		.user_img{
+			height: 70px;
+			width: 70px;
+			border:1.5px solid #f5f6fa;
+
+		}
+		.user_img_msg{
+			height: 40px;
+			width: 40px;
+			border:1.5px solid #f5f6fa;
+
+		}
+	.img_cont{
+			position: relative;
+			height: 70px;
+			width: 70px;
+	}
+	.img_cont_msg{
+			height: 40px;
+			width: 40px;
+	}
+	.online_icon{
+		position: absolute;
+		height: 15px;
+		width:15px;
+		background-color: #4cd137;
+		border-radius: 50%;
+		bottom: 0.2em;
+		right: 0.4em;
+		border:1.5px solid white;
+	}
+	.offline{
+		background-color: #c23616 !important;
+	}
+	.user_info{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 15px;
+	}
+	.user_info span{
+		font-size: 20px;
+		color: white;
+	}
+	.user_info p{
+	font-size: 10px;
+	color: rgba(255,255,255,0.6);
+	}
+	.video_cam{
+		margin-left: 50px;
+		margin-top: 5px;
+	}
+	.video_cam span{
+		color: white;
+		font-size: 20px;
+		cursor: pointer;
+		margin-right: 20px;
+	}
+	.msg_cotainer{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 10px;
+		border-radius: 25px;
+		background-color: #82ccdd;
+		padding: 10px;
+		position: relative;
+	}
+	.msg_cotainer_send{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: 10px;
+		border-radius: 25px;
+		background-color: #78e08f;
+		padding: 10px;
+		position: relative;
+	}
+	.msg_time{
+		position: absolute;
+		left: 0;
+		bottom: -15px;
+		color: rgba(255,255,255,0.5);
+		font-size: 10px;
+	}
+	.msg_time_send{
+		position: absolute;
+		right:0;
+		bottom: -15px;
+		color: rgba(255,255,255,0.5);
+		font-size: 10px;
+	}
+	.msg_head{
+		position: relative;
+	}
+	#action_menu_btn{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		color: white;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	.action_menu{
+		z-index: 1;
+		position: absolute;
+		padding: 15px 0;
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+		border-radius: 15px;
+		top: 30px;
+		right: 15px;
+		display: none;
+	}
+	.action_menu ul{
+		list-style: none;
+		padding: 0;
+	margin: 0;
+	}
+	.action_menu ul li{
+		width: 100%;
+		padding: 10px 15px;
+		margin-bottom: 5px;
+	}
+	.action_menu ul li i{
+		padding-right: 10px;
+
+	}
+	.action_menu ul li:hover{
+		cursor: pointer;
+		background-color: rgba(0,0,0,0.2);
+	}
+	@media(max-width: 576px){
+	.contacts_card{
+		margin-bottom: 15px !important;
+	}
+	}
+</style>
+<script>
+    	$(document).ready(function(){
+$('#action_menu_btn').click(function(){
+	$('.action_menu').toggle();
+});
+	});
+</script>
+
+<script src="/static/jquery.js"></script>
+<script>
+
+    function test() {
+
+           $("#button").show();
+            $("#textfield").show();
+			var uid=$("#rece").val();
+			var dlid=$("#doctorloginid").val();
+			$("#rece").val(uid);
+				var senid=$("#rece").val();
+						var uu=$("#d").val();
+var senid=$("#rece").val();
+  $.ajax({
+            url: "/coun_msg/"+senid,
+            type: "GET",
+            data: {
+
+
+            },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function(dat) {
+
+                 var data=dat["data"];
+
+
+             //////////////////
+
+                $("#send1").text("");
+				var len=data.length;
+				for(var i=0;i<len;i++) {
+                   var rid = data[i]['chat_id'];
+                    var type = data[i]['from_id']
+                    var mesg = data[i]['msg'];
+                    var sendid = data[i]['date'];
+
+
+                    if (type == senid ) {
+//                        $("#send1").append("<div align='center'><table id=tb1'' style='width:300px;'<tr border=0><td><div align='right'><div  class='container darker'><div>" + mesg + "</div></td></tr></table></div>")
+
+                    $("#send1").append("<div class='d-flex justify-content-start mb-4'><div class=img_cont_msg'></div><div class='msg_cotainer'>"+mesg+"</div></div>")
+                    }
+                    else  {
+
+//                        $("#send1").append("<div align='center'><table id=tb1'' style='width:300px;'<tr border=0><td><div align='left'><div><div class='container darker'>" + mesg + "</div></td></tr></table></div>")
+
+                    $("#send1").append("<div class='d-flex justify-content-end mb-4'><div class='msg_cotainer_send'>"+mesg+"</div></div></div>")
+
+
+                    }
+                }
+
+
+                /////////////////////////////////
+
+            },
+            error: function(ts) {
+//{#                alert(ts);#}
+            }
+        });
+
+    }
+
+
+		
+  $.ajax({
+            url: "/chatview",
+            type: "POST",
+            data: {
+
+
+            },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function(dat) {
+         $("#button").hide();
+            $("#textfield").hide();
+                var data=dat;
+                 var len =data.length;
+        for (var i = 0; i < len; i++) {
+
+            var name = data[i]['name'];
+            var image=data[i]['photo']
+
+            var email = data[i]['email'];
+            var id = data[i]['loginid'];
+
+//            $("#tb1").append("<span>" + name + "</span><p>" + email + "</p><span><input style='background:#000000; width='50px'; color:#000000' type='Submit' name='n' value=" + id + " id='i'></span>")
+//<span class='online_icon'></span>
+//        $("#tb1").append("<div class='card-body contacts_body'><ui class='contacts'><li class='active'><div class='img_cont'><img src="+image+" class='rounded-circle user_img'> </div><div class='d-flex bd-highlight'></div><div class='user_info' id='tb1'><span>"+name+"</span><p>"+email+"</p></div><input style='background:#000000; width='50px'; color:#000000' type='Submit' name='n' value=" + id + " id='i'></div></li></ui> </div>")
+
+       $("#tb1").append("<div class='card-body contacts_body'><ui class='contacts'><li class='active'><div class='d-flex bd-highlight'><div class='img_cont'><img src="+image+" class='rounded-circle user_img'><span class='online_ico'></span></div><div class='user_info'><span>"+name+"</span><p>"+email+"</p></div><div align='right'>"
+
+
+           +"<input " +
+
+           "type='submit' name='"+id+"' value='chat' id='i' class='btn btn-info'></div></div></li></ui></div>")
+
+        }
+            },
+            error: function(ts) {
+//{#                alert(ts);#}
+            }
+        });
+
+
+  $(document).on('click','#i',function () {
+        $("#button").show();
+            $("#textfield").show();
+			var uid=$(this).val();
+			var uid= $(this).attr("name");
+			alert(uid);
+			var dlid=$("#doctorloginid").val();
+
+
+			repeatEverySecond();
+
+
+			$("#rece").val(uid);
+				var uu=$("#d").val();
+
+
+
+
+
+  $.ajax({
+            url: "/coun_msg/"+uid,
+            type: "GET",
+            data: {
+
+
+            },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function(dat) {
+
+
+
+                 var data=dat["data"];
+//{#                 alert(data);#}
+                 var name=dat["name"]
+                 var image=dat["photo"]
+
+                $("#iiim").text("")
+                $("#nnnm").text("")
+                $("#iiim").append("<img src="+image+" class='rounded-circle user_img'>")
+                $("#nnnm").append("<span>Chat with "+name+"</span>")
+
+             //////////////////
+
+                $("#send1").text("");
+				var len=data.length;
+				for(var i=0;i<len;i++) {
+                    var rid = data[i]['chat_id'];
+                    var type = data[i]['from_id']
+                    var mesg = data[i]['msg'];
+                    var sendid = data[i]['date'];
+
+                    if (type ==uid ) {
+//                        $("#send1").append("<div align='center'><table id=tb1'' style='width:300px;'<tr border=0><td><div align='right'><div  class='container darker'><div>" + mesg + "</div></td></tr></table></div>")
+
+                    $("#send1").append("<div class='d-flex justify-content-start mb-4'><div class=img_cont_msg'></div><div class='msg_cotainer'>"+mesg+"</div></div>")
+                    }
+                    else  {
+
+//                        $("#send1").append("<div align='center'><table id=tb1'' style='width:300px;'<tr border=0><td><div align='left'><div><div class='container darker'>" + mesg + "</div></td></tr></table></div>")
+
+                    $("#send1").append("<div class='d-flex justify-content-end mb-4'><div class='msg_cotainer_send'>"+mesg+"</div></div></div>")
+
+
+                    }
+
+                }
+
+
+                /////////////////////////////////
+
+            },
+            error: function(ts) {
+//{#                alert(ts);#}
+            }
+        });
+  });
+
+
+
+		$("#button").click(function()
+		{
+			var recevid=$("#doctorloginid").val();
+			var msg=$("#textfield").val();
+			var senid=$("#rece").val();
+
+//{#			alert(recevid+msg+senid);#}
+
+
+
+  $.ajax({
+            url: "/coun_insert_chat/"+msg+"/"+senid,
+            type: "GET",
+            data: {
+
+
+            },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function(dat) {
+
+//{#                alert('success');#}
+                $("#textfield").val("");
+
+            },
+            error: function(ts) {
+//{#                alert(ts);#}
+            }
+        });
+
+
+		});
+
+	
+
+
+</script>
+<script>
+
+
+function repeatEverySecond() {
+
+//{#    alert('hiii');#}
+  intervalID = setInterval(test, 1000);
+}
+
+</script>
+

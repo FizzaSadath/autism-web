@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .probability {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p class="result">Result: <span>{{ res }}</span></p>
+        <p class="probability">Probability: <span>{{ pro|floatformat:2 }}</span></p>
+    </div>
+
+</body>
+</html>

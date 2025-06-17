@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reply to Complaint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 16px;
+            color: #333;
+        }
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            height: 150px;
+            resize: vertical;
+        }
+        .form-group button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Reply to Complaint
+    </div>
+    <div class="container">
+        <h2>Complaint Reply Form</h2>
+        <form action="#" method="POST">
+            <!-- Complaint Information (For Reference) -->
+
+
+
+            <!-- Admin's Reply -->
+            <div class="form-group">
+                <label for="adminReply">Reply:</label>
+                <textarea id="adminReply" name="adminReply" placeholder="Enter your reply here..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Send Reply</button>
+            </div>
+        </form>
+        <a href="/Admin/viewcomplaints.html" class="back-link">Back to Complaints</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,671 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html class="desktop mbr-site-loaded" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="https://r.mobirisesite.com/1112187/assets/images/logo.png?rnd=1737302025660" type="image/x-icon">
+  <meta name="description" content="Explore the AQ-10 Child Version, a comprehensive tool designed to assess child health and development through a series of insightful questions.">
+  <title>AQ-10 Child</title>
+  <link rel="stylesheet" href="{% static 'css/mobirise2.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style(1).css' %}">
+  <link rel="stylesheet" href="{% static 'css/recaptcha.css' %}">
+  <link rel="stylesheet" href="A{% static 'css/css2' %}" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="stylesheet" href="{% static 'css/mbr-additional.css' %}" type="text/css">
+<style>
+.submit-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1fab89;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #0056b3;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h4, .question p {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            font-size: 20px;
+            padding: 0px;
+
+        }
+        .options {
+    display: flex;
+    flex-direction: column;
+    gap: 1%; /* Adjust spacing */
+}
+
+
+
+        .options input[type="radio"] {
+            margin-right: 10px;
+
+        }
+
+        .instructions {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: #6BAA75;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #218838;
+        }
+
+        /* File Input Styling */
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+@-webkit-keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 94% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
+@-moz-keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 94% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
+@-o-keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 94% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
+   @keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 94% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
+@-webkit-keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 8rem; } }
+@-moz-keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 8rem; } }
+@-o-keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 8rem; } }
+   @keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 8rem; } }
+
+@-webkit-keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+@-moz-keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+@-o-keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+@keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+
+@media(max-width: 767px) {
+
+  @-webkit-keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 94% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
+  @-moz-keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 94% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
+  @-o-keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 94% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
+    @keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 94% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
+  @-webkit-keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 12rem; } }
+  @-moz-keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 12rem; } }
+  @-o-keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 12rem; } }
+    @keyframes animationHeight { 0% { height: 0; } 94% { height: 0; } 100% { height: 12rem; } }
+
+  @-webkit-keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+  @-moz-keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+  @-o-keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+  @keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+}
+</style>
+</head>
+<body>
+
+
+  <section data-bs-version="5.1" class="menu menu01 agentm5 cid-uAlf0NvthX" once="menu" id="menu-1-uAlf0NvthX">
+<nav class="navbar navbar-dropdown navbar-expand-lg">
+    <div class="menu_box container-fluid">
+        <div class="navbar-brand d-flex" style="width: 100%; justify-content: space-between; align-items: center;">
+            <span class="navbar-caption-wrap">
+                <a class="navbar-caption display-7" href="/public_prediction">AUTICARE</a>
+            </span>
+            <div class="mbr-section-btn-main" role="tablist">
+                <a class="btn btn-primary-outline display-4" href="/logout" style="margin-left: auto;">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</section>
+<section data-bs-version="5.1" class="header02 agentm5 cid-uAlf0NCMfd" id="hero-2-uAlf0NCMfd">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-5 card">
+                <div class="image-wrapper">
+                    <img src="{% static 'images/photo-1542317785-ae7b6fa20f55.jpeg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 card">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Welcome to AQ-10 Child Version!</h2>
+                    <p class="mbr-text mbr-fonts-style display-7">Your journey to understanding your child's health starts here!</p>
+                    <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="">Join Now</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-bs-version="5.1" class="list01 agentm5 cid-uAlf0NDiHc" id="faq-1-uAlf0NDiHc">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-3 card">
+                <div class="desc-wrapper">
+                    <p class="mbr-desc mbr-fonts-style display-4">FAQs</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9 card">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Common Questions Answered</h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 card">
+                <div class="image-wrapper">
+                    <div class="image-wrap">
+                        <img src="{% static 'images/photo-1611708314849-8bb91fe0fa56.jpeg' %}" alt="">
+                    </div>
+                    <div class="decor-wrap"></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8 card">
+                <div id="bootstrap-accordion_2" class="panel-group accordionStyles accordion" role="tablist">
+
+                    <!-- Question 1 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a class="panel-title collapsed" data-bs-toggle="collapse" href="#collapse1_2" aria-expanded="false">
+                                <h4 class="panel-title-edit mbr-fonts-style display-5">What is AQ-10 Child Version?</h4>
+                                <span class="icon-wrapper">
+                                    <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="collapse1_2" class="panel-collapse noScroll collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-7">It's a fun and interactive tool to assess your child's health!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <a class="panel-title collapsed" data-bs-toggle="collapse" href="#collapse2_2" aria-expanded="false">
+                                <h4 class="panel-title-edit mbr-fonts-style display-5">How do I fill out the form?</h4>
+                                <span class="icon-wrapper">
+                                    <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="collapse2_2" class="panel-collapse noScroll collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-7">Just follow the prompts and answer honestly, it's easy!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <a class="panel-title collapsed" data-bs-toggle="collapse" href="#collapse3_2" aria-expanded="false">
+                                <h4 class="panel-title-edit mbr-fonts-style display-5">Is my data safe?</h4>
+                                <span class="icon-wrapper">
+                                    <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="collapse3_2" class="panel-collapse noScroll collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-7">Absolutely! We prioritize your privacy and data security.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFour">
+                            <a class="panel-title collapsed" data-bs-toggle="collapse" href="#collapse4_2" aria-expanded="false">
+                                <h4 class="panel-title-edit mbr-fonts-style display-5">Can I edit my responses?</h4>
+                                <span class="icon-wrapper">
+                                    <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="collapse4_2" class="panel-collapse noScroll collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-7">Yes, you can go back and change your answers anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFive">
+                            <a class="panel-title collapsed" data-bs-toggle="collapse" href="#collapse5_2" aria-expanded="false">
+                                <h4 class="panel-title-edit mbr-fonts-style display-5">What if I have more questions?</h4>
+                                <span class="icon-wrapper">
+                                    <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="collapse5_2" class="panel-collapse noScroll collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-7">Feel free to contact our support team for help!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section data-bs-version="5.1" class="slider01 mbr-embla agentm5 cid-uAlf0NOxRA" id="team-1-uAlf0NOxRA">
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-lg-9 card">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">The Dream Team Behind AUTICARE</h2>
+                </div>
+            </div>
+            <div class="col-12 card">
+                <div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play-interval="5" data-draggable="true">
+                    <div class="embla__viewport is-draggable">
+                        <div class="embla__container" style="transform: translate3d(-69.3182%, 0px, 0px);">
+                            {% for i in data %}
+
+                            <div class="embla__slide slider-image item is-selected" style="margin-left: 1rem; margin-right: 1rem; left: 0%;">
+                                <div class="item-desc">
+                                    <p class="card-desc mbr-fonts-style display-4">
+                                        <strong> {{ i.qualification }}</strong>
+                                    </p>
+                                </div>
+                                <div class="slide-content">
+                                    <div class="item-content">
+                                        <h4 class="item-title mbr-fonts-style display-5">{{ i.name }}</h4>
+                                    </div>
+                                    <div class="item-wrapper">
+                                        <div class="item-img">
+
+                                            <div class="image-wrap">
+                                                <img src="{{ i.image.url }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button class="embla__button embla__button--prev">
+                        <span class="mbr-iconfont mobi-mbri-left mobi-mbri" aria-hidden="true"></span>
+                        <span class="sr-only visually-hidden visually-hidden visually-hidden">Previous</span>
+                    </button>
+                    <button class="embla__button embla__button--next">
+                        <span class="mbr-iconfont mobi-mbri-right mobi-mbri" aria-hidden="true"></span>
+                        <span class="sr-only visually-hidden visually-hidden visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-bs-version="5.1" class="features04 agentm5 cid-uAlf0O23j1" id="features-2-uAlf0O23j1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-3 card">
+                <div class="desc-wrapper">
+                    <p class="mbr-desc mbr-fonts-style display-4">Family History</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9 card">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Family Health Matters</h2>
+                </div>
+            </div>
+            <div class="col-12 card">
+                <div class="cards-wrapper">
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+
+                                <h4 class="card-title mbr-fonts-style display-5">Family History Check</h4>
+                                <p class="card-text mbr-fonts-style display-7">Is there a family history of health issues? We need to know!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+
+                                <h4 class="card-title mbr-fonts-style display-5">Upload a Photo</h4>
+                                <p class="card-text mbr-fonts-style display-7">Upload a cute photo of your child. We love seeing those adorable faces!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+
+                                <h4 class="card-title mbr-fonts-style display-5">Submit Your Info</h4>
+                                <p class="card-text mbr-fonts-style display-7">Hit that submit button and let’s get this party started!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+
+                                <h4 class="card-title mbr-fonts-style display-5">Get Results</h4>
+                                <p class="card-text mbr-fonts-style display-7">Once submitted, we’ll analyze and provide insights. Exciting, right?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-bs-version="5.1" class="features09 agentm5 cid-uAlf0O3juy" id="features-5-uAlf0O3juy">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-2 card">
+                <div class="desc-wrapper">
+                    <p class="mbr-desc mbr-fonts-style display-4">Questionnaire Fun</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 card">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Let’s Get Quizzical!</h2>
+                </div>
+            </div>
+            <div>
+                <form action="/public_prediction_post" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="additional-questions">
+                    <div class="question">
+                        <h4>1. Age (in months):</h4>
+                        <input type="number" name="age" min="0" required>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. Gender:</h4>
+                        <div class="options">
+                            <label><input type="radio" name="gender" value="0" required> Male</label><br>
+                            <label><input type="radio" name="gender" value="1"> Female</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>3. Jaundice at birth?</p>
+                        <div class="options">
+                            <label><input type="radio" name="jaundice" value="1" required> Yes</label><br>
+                            <label><input type="radio" name="jaundice" value="0"> No</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>4. History of autism in immediate family:</p>
+                        <div class="options">
+                            <label ><input type="radio" name="family_history" value="1" required> Yes</label><br>
+                            <label><input type="radio" name="family_history" value="0" required> No</label><br>
+                        </div>
+                        <div class="question">
+                            <p>5. Upload photo</p>
+                            <label for="image" style="font-size: 20px">Select an image:</label>
+                            <input type="file" id="image" name="image" accept="image/*" required>
+                        </div>
+                    </div>
+                    <p style="font-size: 28px"><strong>Questions 1-10 is a quick referral guide for parents</strong> to complete about a child with suspected autism who does not have a learning disability.</p>
+
+            <div class="instructions">
+                <p style="font-size: 28px"><strong>Instructions:</strong> Please fill in all fields and tick one option per question only:</p>
+            </div>
+                <!-- Original Questions -->
+                <div class="questions">
+                    <div class="question">
+                        <p>1. S/he often notices small sounds when others do not</p>
+                        <div class="options">
+                            <label><input type="radio" name="A1" value="1" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A1" value="1"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A1" value="0"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A1" value="0"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>2. S/he usually concentrates more on the whole picture, rather than the small details</p>
+                        <div class="options">
+                            <label><input type="radio" name="A2" value="0" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A2" value="0"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A2" value="1"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A2" value="1"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>3. In a social group, s/he can easily keep track of several different people’s conversations</p>
+                        <div class="options">
+                            <label><input type="radio" name="A3" value="0" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A3" value="0"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A3" value="1"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A3" value="1"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>4. S/he finds it easy to go back and forth between different activities</p>
+                        <div class="options">
+                            <label><input type="radio" name="A4" value="0" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A4" value="0"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A4" value="1"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A4" value="1"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>5. S/he doesn’t know how to keep a conversation going with his/her peers</p>
+                        <div class="options">
+                            <label><input type="radio" name="A5" value="1" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A5" value="1"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A5" value="0"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A5" value="0"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>6. S/he is good at social chit-chat</p>
+                        <div class="options">
+                            <label><input type="radio" name="A6" value="0" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A6" value="0"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A6" value="1"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A6" value="1"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>7. When s/he reads a story, s/he finds it difficult to work out the character’s intentions or feelings</p>
+                        <div class="options">
+                            <label><input type="radio" name="A7" value="1" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A7" value="1"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A7" value="0"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A7" value="0"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>8. When s/he was in preschool, s/he used to enjoy playing games involving pretending with other children</p>
+                        <div class="options">
+                            <label><input type="radio" name="A8" value="0" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A8" value="0"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A8" value="1"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A8" value="1"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>9. S/he finds it easy to work out what someone is thinking or feeling just by looking at their face</p>
+                        <div class="options">
+                            <label><input type="radio" name="A9" value="0" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A9" value="0"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A9" value="1"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A9" value="1"> Definitely Disagree</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>10. S/he finds it hard to make new friends</p>
+                        <div class="options">
+                            <label><input type="radio" name="A10" value="1" required> Definitely Agree</label><br>
+                            <label><input type="radio" name="A10" value="1"> Slightly Agree</label><br>
+                            <label><input type="radio" name="A10" value="0"> Slightly Disagree</label><br>
+                            <label><input type="radio" name="A10" value="0"> Definitely Disagree</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-bs-version="5.1" class="map01 agentm5 cid-uAlf0O54BM" id="image-1-uAlf0O54BM">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 card">
+                <img src="{% static 'images/photo-1536825919521-ab78da56193b.jpeg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features08 agentm5 cid-uAlf0O6o02" id="testimonials-2-uAlf0O6o02">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-3 card">
+                <div class="desc-wrapper">
+                    <p class="mbr-desc mbr-fonts-style display-4">Testimonials</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9 card">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">What Our Users Say</h2>
+                </div>
+            </div>
+            <div class="col-12 card">
+                <div class="cards-wrapper">
+                    <div class="cards-wrap">
+                        <div class="item features-without-image item-mb">
+                            <div class="item-wrapper">
+                                <div class="card-box">
+                                    <p class="card-text mbr-fonts-style display-7">This service changed my life! I can’t believe how easy it is to use!</p>
+                                    <p class="card-desc mbr-fonts-style display-7">John Smith</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item features-without-image item-mb">
+                            <div class="item-wrapper">
+                                <div class="card-box">
+                                    <p class="card-text mbr-fonts-style display-7">Absolutely fantastic! I recommend it to everyone I know!</p>
+                                    <p class="card-desc mbr-fonts-style display-7">Sarah Johnson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards-wrap">
+                        <div class="item features-without-image item-mb">
+                            <div class="item-wrapper">
+                                <div class="card-box">
+                                    <p class="card-text mbr-fonts-style display-7">A game changer! I’m never going back to the old way!</p>
+                                    <p class="card-desc mbr-fonts-style display-7">Mike Brown</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item features-without-image item-mb">
+                            <div class="item-wrapper">
+                                <div class="card-box">
+                                    <p class="card-text mbr-fonts-style display-7">Incredible experience! I’m so glad I found this!</p>
+                                    <p class="card-desc mbr-fonts-style display-7">Emily Davis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards-wrap">
+                        <div class="item features-without-image item-mb">
+                            <div class="item-wrapper">
+                                <div class="card-box">
+                                    <p class="card-text mbr-fonts-style display-7">Best decision ever! I’m thrilled with the results!</p>
+                                    <p class="card-desc mbr-fonts-style display-7">Chris Wilson</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item features-without-image item-mb">
+                            <div class="item-wrapper">
+                                <div class="card-box">
+                                    <p class="card-text mbr-fonts-style display-7">I can’t imagine my life without it! Truly amazing!</p>
+                                    <p class="card-desc mbr-fonts-style display-7">Jessica Taylor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-bs-version="5.1" class="footer01 agentm5 cid-uAlf0OgXpk" once="footers" id="footer-1-uAlf0OgXpk">
+   <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-5 card">
+
+            </div>
+
+
+            <div class="col-12 card">
+
+                <p class="mbr-fonts-style copyright display-7">© 2025 AQ-10. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/smooth-scroll.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/navbar-dropdown.js' %}"></script>
+  <script src="{% static 'js/mbr-switch-arrow.js' %}"></script>
+  <script src="{% static 'js/embla.min.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/script(1).js' %}"></script>
+  <script src="{% static 'js/formoid.min.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
