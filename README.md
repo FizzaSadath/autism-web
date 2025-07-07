@@ -8,8 +8,8 @@ This repository contains the web frontend and backend APIs for the **Autism Dete
 -  Upload images for autism screening
 -  Fill autism questionnaire (AQ-10)
 -  View test and diagnosis results
--  Experts can chat with parents, review results, and recommend study materials
--  Receive Personalized study material 
+-  Experts can chat with parents, and review results
+-  Recommends Personalized study materials 
 
 ## Tech Stack
 
