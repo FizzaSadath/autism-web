@@ -7,9 +7,9 @@ This repository contains the web frontend and backend APIs for the **Autism Dete
 
 -  Upload images for autism screening
 -  Fill autism questionnaire (AQ-10)
--  View graphs on emotion trends and diagnosis results
+-  View test and diagnosis results
 -  LangChain-powered chatbot with expert insights
--  Personalized study material delivery
+-  Personalized study material 
 
 ## Tech Stack
 
