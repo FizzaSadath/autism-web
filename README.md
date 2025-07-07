@@ -49,11 +49,6 @@ This repository contains the web frontend and backend APIs for the **Autism Dete
    python manage.py runserver
    ```
 
-## UI Preview
-
-![Dashboard UI](assets/images/dashboard_ui.png)
-
----
 
 ## Connected Modules
 
