@@ -24,7 +24,7 @@ This repository contains the web frontend and backend APIs for the **Autism Dete
 📂 autism-web
  ┣ 📁 templates/
  ┣ 📁 static/
- ┣ 📁 chatbot/
+ ┣ 📁 expert_chat/
  ┣ 📄 views.py
  ┣ 📄 models.py
  ┣ 📄 urls.py
